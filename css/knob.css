@@ -1,0 +1,84 @@
+.knob {
+	position: relative;
+	margin-left: 190px;
+	height: 230px;
+	width: 230px;
+}
+
+.knob img {
+	position: absolute;
+}
+
+.knob .white-space {
+	position: relative;
+	background: white;
+	border: 1px solid black;
+	width: 120px;
+	height: 40px;
+	z-index: 3;
+	top: 195px;
+	left: 55px;
+	perspective: 60px;
+	visibility: hidden;
+}
+
+.knob .white-space2 {
+	position: absolute;
+	visibility: visible;
+	background: white;
+	/*   border: 1px solid black; */
+	width: 120px;
+	height: 65px;
+	z-index: 6;
+	top: -30px;
+	transform-style: preserve-3d;
+	transform: rotateX(30deg);
+}
+
+#xBack {
+	z-index: 5;
+	top: 25px;
+	left: 22px;
+	border-radius: 50%;
+	width: 186px;
+	height: 186px;
+}
+
+#xOval {
+	top: 5px;
+	left: 5px;
+	width: 221px;
+	height: 221px;
+}
+
+#xKnob {
+	width: 64px;
+	height: 75px;
+	z-index: 3;
+	border: 2px dotted black;
+	transition: none;
+	transform-style: preserve-3D;
+	top: 130px;
+	left: 160px;
+}
+
+.knob input {
+	margin-left: -100px;
+}
+
+.knob #center {
+	position: absolute;
+	top: 115px;
+	left: 115px;
+	z-index: 10;
+}
+
+#center_span {
+	position: absolute;
+	top: -35px;
+	margin-left: -55px;
+	font-size: 66px;
+	color: #333333;
+	letter-spacing: 0;
+	text-align: left;
+}

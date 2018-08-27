@@ -1,0 +1,11 @@
+#overflow_x {
+	overflow: hidden;
+	height: 145px;
+	width: 1386px;
+}
+
+#overflow_y {
+	overflow: auto;
+	height: 270px;
+	width: 220px;
+}

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Яндекс Дом</title>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/sections.css">
+  <link rel="stylesheet" href="./css/header_nav.css">
+  <link rel="stylesheet" href="./css/overflow.css">
+  <link rel="stylesheet" href="./css/icon.css">
+  <link rel="stylesheet" href="./css/widgets.css">
+  <link rel="stylesheet" href="./css/widgets_bar.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./css/widget_popup_yeelight.css">
+  <link rel="stylesheet" href="./css/section_weather.css">
+  <link rel="stylesheet" href="./css/widget_popup_floor.css">
+  <link rel="stylesheet" href="./css/knob.css">
+  <style>
+  </style>
+</head>
+
+
+
+<body>
+  <div class="container">
+    <header>
+      <nav>
+        <img src="img/logo@1x.png" alt="yandexlogo">
+
+        <a href="./index.html" id="active">Сводка</a>
+        <a href="#">Устройства</a>
+        <a href="#">Сценарии</a>
+      </nav>
+    </header>
+  </div>
+  <hr>
+  <div class="container">
+    <main>
+      <section>
+
+        <h2>Главное</h2>
+
+        <div id="main">
+
+          <div id="info">
+            <h1>Привет, Геннадий!</h1>
+            <p>Двери и окна закрыты, сигнализация включена.</p>
+
+            <div id="info_weather">
+              <div class="info__col">
+                <span>Дома</span>
+                <p>+23</p>
+              </div>
+              <div class="info__col">
+                <span>За окном</span>
+                <p>+19</p>
+              </div>
+              <img src="./icons/cloud-drizzle.png" alt="cloud_drizzle" id="weather__icon">
+            </div>
+          </div>
+
+
+          <div id="widgets">
+            <div id="overflow_y">
+              <div class="widget hall xiaomi_floor">
+                <img src="./icons/icon_temperature_2@1x.png" alt="icon_sun" class="icon">
+                <div class="widget__info">
+                  <p>Xiaomi Warm Floor</p>
+                  <p>Включится в 20:00</p>
+                </div>
+              </div>
+
+              <div class="widget">
+                <img src="./icons/icon_temperature@1x.png" alt="icon_temperature" class="icon">
+                <div class="widget__info">
+                  <p>Philips Cooler</p>
+                  <p>Начнет охлаждать в 16:30</p>
+                </div>
+              </div>
+
+              <div class="widget xiaomi_yeelight">
+                <img src="./icons/icon_sun@1x.png" alt="icon_sun" class="icon">
+                <div class="widget__info">
+                  <p>Xiaomi Yeelight LED Smart Bulb</p>
+                  <p>Включится в 17:00</p>
+                </div>
+              </div>
+
+              <div class="widget">
+                <img src="./icons/icon_sun@1x.png" alt="icon_sun" class="icon">
+                <div class="widget__info">
+                  <p>D-Link Omna 180 Cam</p>
+                  <p>Включится в 17:00</p>
+                </div>
+              </div>
+
+            </div>
+
+            <div id="widget__button" onclick="widgetButtonUp()"></div>
+
+          </div>
+          <!-- end of widgets -->
+        </div>
+        <!-- end of main -->
+      </section>
+
+      <section>
+
+        <div id="scenarios_header">
+
+          <h2>Избранные сценарии</h2>
+          <div>
+            <label class="prev" for="i1">
+
+              <img src="./icons/arrow-left.svg" alt="arrow_to_left">
+
+            </label>
+            <label class="next" for="i2">
+
+              <img src="./icons/arrow-left.svg" alt="arrow_to_right">
+
+            </label>
+          </div>
+        </div>
+        <div id="scenarios">
+          <input type="radio" id="i1" name="pages" checked />
+          <input type="radio" id="i2" name="pages" />
+          <input type="radio" id="i3" name="pages" />
+
+          <div class="scenario_page" id="first_page">
+
+            <div class="widget widget_scenario" data-scenario="1">
+              <img src="./icons/icon_sun_active@1x.png" alt="icon_sun" class="icon">
+              <div class="widget__info">
+                <p>Выключить свет в доме и во дворе</p>
+
+              </div>
+            </div>
+
+
+            <div class="widget widget_scenario" data-scenario="2">
+              <img src="./icons/icon_scheduled@1x.png" alt="icon_sun" class="icon">
+              <div class="widget__info">
+                <p>Я ухожу</p>
+              </div>
+            </div>
+
+            <div class="widget widget_scenario" data-scenario="3">
+              <img src="./icons/icon_sun_active@1x.png" alt="icon_sun" class="icon">
+              <div class="widget__info">
+                <p>Включить свет в коридоре</p>
+              </div>
+            </div>
+
+            <div class="widget widget_scenario" data-scenario="4">
+              <img src="./icons/icon_temperature_2@1x.png" alt="icon_sun" class="icon">
+              <div class="widget__info">
+                <p>Набрать горячую ванну</p>
+                <p>Начнется в 18:00</p>
+              </div>
+            </div>
+
+            <div class="widget widget_scenario" data-scenario="5">
+              <img src="./icons/icon_temperature_2@1x.png" alt="icon_sun" class="icon">
+              <div class="widget__info">
+                <p>Сделать пол тёплым во всей квартире</p>
+              </div>
+            </div>
+
+
+            <!-- =============== -->
+
+            <div class="widget widget_scenario" data-scenario="1">
+              <img src="./icons/icon_sun_active@1x.png" alt="icon_sun" class="icon">
+              <div class="widget__info">
+                <p>Выключить свет в доме и во дворе</p>
+
+              </div>
+            </div>
+
+            <div class="widget widget_scenario" data-scenario="1">
+              <img src="./icons/icon_scheduled@1x.png" alt="icon_sun" class="icon">
+              <div class="widget__info">
+                <p>Я ухожу</p>
+              </div>
+            </div>
+
+            <div class="widget widget_scenario" data-scenario="1">
+              <img src="./icons/icon_sun_active@1x.png" alt="icon_sun" class="icon">
+              <div class="widget__info">
+                <p>Включить свет в коридоре</p>
+              </div>
+            </div>
+
+            <div class="widget widget_scenario" data-scenario="1">
+              <img src="./icons/icon_temperature_2@1x.png" alt="icon_sun" class="icon">
+              <div class="widget__info">
+                <p>Набрать горячую ванну</p>
+                <p>Начнется в 18:00</p>
+              </div>
+            </div>
+
+          </div>
+          <!-- end of scenario page -->
+          <div class="scenario_page" id="second_page">
+
+            <div class="widget widget_scenario" data-scenario="1">
+              <img src="./icons/icon_sun_active@1x.png" alt="icon_sun" class="icon">
+              <div class="widget__info">
+                <p>Сделать пол тёплым во всей квартире</p>
+              </div>
+            </div>
+
+          </div>
+
+
+      </section>
+    </main>
+
+    <div id="all_widgets">
+      <div id="all_widgets__header">
+        <nav>
+
+          <p>Избранные устройства</p>
+
+          <label for="j1" class="wg_head w_active">Все</label>
+
+
+          <label for="j2" class="wg_head">Кухня</label>
+
+
+          <label for="j3" class="wg_head">Зал</label>
+
+
+          <label for="j4" class="wg_head">Лампы</label>
+
+
+          <label for="j5" class="wg_head">Камеры</label>
+
+
+        </nav>
+
+        <div id="all_widgets__arrows">
+
+          <img src="./icons/arrow-left.svg" alt="arrow_to_left" onclick="arrowToLeft()">
+
+
+          <img src="./icons/arrow-left.svg" alt="arrow_to_right" onclick="arrowToRight()">
+
+        </div>
+
+      </div>
+
+      <div id="overflow_x">
+        <div id="all_widgets__tape">
+          <input type="radio" id="j1" name="devices" checked />
+          <input type="radio" id="j2" name="devices" />
+          <input type="radio" id="j3" name="devices" />
+          <input type="radio" id="j4" name="devices" />
+          <input type="radio" id="j5" name="devices" />
+          <div class="widget lamp xiaomi_yeelight">
+            <img src="./icons/icon_sun_active@1x.png" alt="icon_sun" class="icon">
+            <div class="widget__info">
+              <p>Xiaomi Yeelight LED Smart Bulb</p>
+              <p>Включится в 17:00</p>
+            </div>
+          </div>
+          <div class="widget camera">
+            <img src="./icons/icon_sun@1x.png" alt="icon_sun" class="icon">
+            <div class="widget__info">
+              <p>D-Link Omna 180 Cam</p>
+              <p>Включится в 17:00</p>
+            </div>
+          </div>
+          <div class="widget hall">
+            <img src="./icons/icon_temperature@1x.png" alt="icon_sun" class="icon">
+            <div class="widget__info">
+              <p>Elgato Eve Degree Connected</p>
+              <p>Выключено до 17:00</p>
+            </div>
+          </div>
+          <div class="widget lamp">
+            <img src="./icons/icon_sun@1x.png" alt="icon_sun" class="icon">
+            <div class="widget__info">
+              <p>LIFX Mini Day & Dusk A60 E27</p>
+              <p>Включится в 17:00</p>
+            </div>
+          </div>
+          <div class="widget hall">
+            <img src="./icons/icon_sun_active@1x.png" alt="icon_sun" class="icon">
+            <div class="widget__info">
+              <p>Xiaomi Mi Air Purifier 2S</p>
+              <p>Включится в 17:00</p>
+            </div>
+          </div>
+          <div class="widget hall xiaomi_floor">
+            <img src="./icons/icon_temperature_2@1x.png" alt="icon_sun" class="icon">
+            <div class="widget__info">
+              <p>Xiaomi Warm Floor</p>
+              <p>Включится в 20:00</p>
+            </div>
+          </div>
+          <div class="widget lamp">
+            <img src="./icons/icon_sun@1x.png" alt="icon_sun" class="icon">
+            <div class="widget__info">
+              <p>Philips Zhirui</p>
+              <p>Выключено</p>
+            </div>
+          </div>
+
+          <div class="widget kitchen">
+            <img src="./icons/icon_sun@1x.png" alt="icon_sun" class="icon">
+            <div class="widget__info">
+              <p>Philips Cooler</p>
+              <p>Начнет охлаждать в 16:30</p>
+            </div>
+          </div>
+          <div class="widget kitchen">
+            <img src="./icons/icon_sun@1x.png" alt="icon_sun" class="icon">
+            <div class="widget__info">
+              <p>Philips Cooler</p>
+              <p>Начнет охлаждать в 16:30</p>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+      <!-- end of overflow_x -->
+
+    </div>
+    <!-- end of all_widgets -->
+    <footer>
+      <nav>
+        <a href="#">Помощь</a>
+        <a href="#">Обратная связь</a>
+        <a href="#">Разработчикам</a>
+        <a href="#">Условия использования</a>
+
+      </nav>
+      <p id="watermark">© 2001–2017 ООО «Яндекс»</p>
+    </footer>
+
+    </div>
+    <!-- end of container -->
+
+    <div class="widget_popup" id="xiaomi_warm_floor">
+      <div class="widget_content">
+        <div class="widget_content__header">
+          <div class="header__left">
+            <p>Xiaomi Warm Floor</p>
+            <p>Включено</p>
+          </div>
+          <div class="header__right"><span id="knob_temp">+23</span>
+            <img src="./icons/icon_temperature_2@1x.png" alt="temperature">
+          </div>
+        </div>
+        <!-- end of header -->
+        <div class="knob">
+
+          <img src="./img/background@1x.svg" alt="back" id="xBack" onselectstart="return false">
+          <img src="./img/Oval@1x.png" alt="oval" id="xOval" onselectstart="return false">
+          <img src="./img/OvalCopy.png" alt="knob" id="xKnob" onselectstart="return false">
+
+          <div id="center" onselectstart="return false"><span id="center_span">+23</span></div>
+
+          <div class="white-space">div1
+            <div class="white-space2">div2</div>
+          </div>
+
+        </div>
+
+
+      </div>
+      <div class="widget_content__buttons">
+        <div class="accept">Применить</div>
+        <div class="decline">Закрыть</div>
+      </div>
+    </div>
+
+    <!-- eshe odin poput -->
+
+    <div class="widget_popup" id="xiaomi_yeelight_bulb">
+      <div class="widget_content">
+        <div class="widget_content__header">
+          <div class="header__left">
+            <p>Xiaomi Yeelight LED Smart Bulb</p>
+            <p>Включится в 17:00</p>
+          </div>
+          <div class="header__right">
+            <img src="./icons/icon_sun@1x.png" alt="light">
+          </div>
+        </div>
+        <!-- end of header -->
+        <div class="range">
+
+          <form action="" method="get" oninput="rating_output.value=rating.value">
+            <div class="half-width">
+              <label for="rating">Вручную</label>
+              <input name="rating" id="rating" type="range" min="0" max="10" step="1" value="5">
+            </div>
+            <div class="half-width output-area">
+              <output name="rating_output" id="rating_output">4</output>
+            </div>
+          </form>
+
+        </div>
+
+
+      </div>
+      <div class="widget_content__buttons ">
+        <div class="accept ">Применить</div>
+        <div class="decline ">Закрыть</div>
+      </div>
+    </div>
+
+    <!-- konec. Стили понятное дело надо нормально сортировать и переименовать -->
+    <div class="shadow">
+
+    </div>
+
+
+    <script src="./js/scripts.js "></script>
+    <script src="./js/knob.js "></script>
+    <script src="./js/popup_floor.js "></script>
+    <script src="./js/ "></script>
+</body>
+
+</html>

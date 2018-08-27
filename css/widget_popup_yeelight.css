@@ -1,0 +1,129 @@
+#xiaomi_yeelight_bulb {
+	height: 238px;
+}
+
+.range {
+	position: relative;
+	margin-left: 60px;
+	height: 130px;
+	width: 500px;
+}
+img[alt="light"] {
+	height: 1.1em;
+}
+
+input[type="range"] {
+	-webkit-appearance: none;
+	width: 100%;
+	margin: 1.05px 0;
+}
+input[type="range"]:focus {
+	outline: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 33.9px;
+	cursor: pointer;
+	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+	background: linear-gradient(
+		to right,
+		red,
+		cyan,
+		orange,
+		yellow,
+		green,
+		lightblue,
+		blue,
+		purple
+	);
+	border-radius: 7px;
+	border: 1.3px solid #cd0101;
+}
+input[type="range"]::-webkit-slider-thumb {
+	box-shadow: 1.9px 1.9px 1px #170000, 0px 0px 1.9px #310000;
+	border: 1.6px solid #5175e0;
+	height: 36px;
+	width: 18px;
+	border-radius: 37px;
+	background: #7effff;
+	cursor: pointer;
+	-webkit-appearance: none;
+	margin-top: -2.35px;
+}
+input[type="range"]:focus::-webkit-slider-runnable-track {
+	background: linear-gradient(
+		to right,
+		red,
+		cyan,
+		orange,
+		yellow,
+		green,
+		lightblue,
+		blue,
+		purple
+	);
+}
+input[type="range"]::-moz-range-track {
+	width: 100%;
+	height: 33.9px;
+	cursor: pointer;
+	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+	background: linear-gradient(
+		to right,
+		red,
+		cyan,
+		orange,
+		yellow,
+		green,
+		lightblue,
+		blue,
+		purple
+	);
+	border-radius: 7px;
+	border: 1.3px solid #cd0101;
+}
+input[type="range"]::-moz-range-thumb {
+	box-shadow: 1.9px 1.9px 1px #170000, 0px 0px 1.9px #310000;
+	border: 1.6px solid #5175e0;
+	height: 36px;
+	width: 18px;
+	border-radius: 37px;
+	background: #7effff;
+	cursor: pointer;
+}
+input[type="range"]::-ms-track {
+	width: 100%;
+	height: 33.9px;
+	cursor: pointer;
+	background: transparent;
+	border-color: transparent;
+	color: transparent;
+}
+input[type="range"]::-ms-fill-lower {
+	background: #5c629e;
+	border: 1.3px solid #cd0101;
+	border-radius: 14px;
+	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type="range"]::-ms-fill-upper {
+	background: #6b71a9;
+	border: 1.3px solid #cd0101;
+	border-radius: 14px;
+	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type="range"]::-ms-thumb {
+	box-shadow: 1.9px 1.9px 1px #170000, 0px 0px 1.9px #310000;
+	border: 1.6px solid #5175e0;
+	height: 36px;
+	width: 18px;
+	border-radius: 37px;
+	background: #7effff;
+	cursor: pointer;
+	height: 33.9px;
+}
+input[type="range"]:focus::-ms-fill-lower {
+	background: #6b71a9;
+}
+input[type="range"]:focus::-ms-fill-upper {
+	background: #7b80b2;
+}

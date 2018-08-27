@@ -1,0 +1,57 @@
+#widgets {
+	margin: 20px 20px 0 0;
+	padding: 0;
+	overflow: hidden;
+	width: 200px;
+}
+
+.widget {
+	height: 120px;
+	width: 200px;
+	margin-bottom: 15px;
+	border-radius: 20px;
+	background: white;
+	position: relative;
+	cursor: pointer;
+}
+#widget__button {
+	cursor: pointer;
+	height: 41px;
+	background: url(../icons/arrow.png) no-repeat center center #f7f7f7;
+	border-radius: 20px 20px 0 0;
+}
+.widget__info {
+	width: 174px;
+	margin-left: 14px;
+	position: absolute;
+	bottom: 12px;
+}
+
+.widget__info p:last-child {
+	margin-top: 4px;
+	font-size: 13px;
+	color: #858585;
+	letter-spacing: 0;
+}
+
+.widget__info p:first-child {
+	font-weight: bold;
+	font-size: 16px;
+	color: #333333;
+	letter-spacing: 0;
+}
+
+.widget_scenario {
+	height: 100px;
+	border-radius: 0;
+	border-radius: 20px;
+	background: #f7f7f7;
+}
+
+.widget_scenario:hover {
+	background: #ffffff;
+	box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.9);
+}
+/* .widget_scenario:last-child {
+	margin-right: 215px;
+} */

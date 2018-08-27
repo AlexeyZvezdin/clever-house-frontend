@@ -1,0 +1,101 @@
+main {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 27px;
+}
+
+main section {
+	width: 630px;
+	display: flex;
+	flex-direction: column;
+}
+
+section h2 {
+	margin: 0;
+	padding: 0;
+}
+
+#main {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: 20px;
+	width: 630px;
+	height: 331px;
+	background: url(../img/bg@1x.png);
+}
+
+#info {
+	margin-left: 25px;
+}
+
+#info h1 {
+	padding: 0;
+	margin: 25px 0 0 0;
+}
+#info p {
+	padding: 0;
+	margin: 6px 0 0 0;
+}
+
+#scenarios {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: 20px;
+	width: 630px;
+	height: 331px;
+	flex-wrap: wrap;
+}
+
+#scenarios_header {
+	display: flex;
+	justify-content: space-between;
+}
+#scenarios_header a {
+	cursor: pointer;
+}
+
+#scenarios_header label {
+	cursor: pointer;
+	padding: 10px;
+}
+
+#scenarios_header img[alt="arrow_to_right"] {
+	transform: scaleX(-1);
+}
+/* transform: skewX(-1); */
+#i1,
+#i2,
+#i3 {
+	display: none;
+}
+
+.scenario_page {
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+	flex-wrap: wrap;
+	background: white;
+	z-index: 1;
+}
+
+#i1:checked ~ #first_page,
+#i2:checked ~ #second_page,
+#i3:checked ~ #third_page {
+	z-index: 9;
+	animation: scroll 0.5s ease-in-out;
+}
+
+@keyframes scroll {
+	0% {
+		opacity: 0.4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
