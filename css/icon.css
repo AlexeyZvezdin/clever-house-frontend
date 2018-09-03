@@ -2,3 +2,9 @@
 	padding: 0;
 	margin: 14px 0 0 14px;
 }
+
+.widgets_icon {
+	position: relative;
+	height: 1.1em;
+	margin-bottom: 5px;
+}

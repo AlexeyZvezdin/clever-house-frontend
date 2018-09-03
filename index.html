@@ -16,9 +16,11 @@
   <link rel="stylesheet" href="./css/widgets_bar.css">
   <link rel="stylesheet" href="./css/footer.css">
   <link rel="stylesheet" href="./css/widget_popup_yeelight.css">
-  <link rel="stylesheet" href="./css/section_weather.css">
-  <link rel="stylesheet" href="./css/widget_popup_floor.css">
+  <link rel="stylesheet" href="./css/scenarios_weather.css">
+  <link rel="stylesheet" href="./css/widget_popup.css">
   <link rel="stylesheet" href="./css/knob.css">
+  <link rel="stylesheet" href="./css/scenarios.css">
+  <link rel="stylesheet" href="./css/widget_popup_eve.css">
   <style>
   </style>
 </head>
@@ -276,7 +278,7 @@
               <p>Включится в 17:00</p>
             </div>
           </div>
-          <div class="widget hall">
+          <div class="widget hall elgatoeve">
             <img src="./icons/icon_temperature@1x.png" alt="icon_sun" class="icon">
             <div class="widget__info">
               <p>Elgato Eve Degree Connected</p>
@@ -355,8 +357,8 @@
             <p>Xiaomi Warm Floor</p>
             <p>Включено</p>
           </div>
-          <div class="header__right"><span id="knob_temp">+23</span>
-            <img src="./icons/icon_temperature_2@1x.png" alt="temperature">
+          <div class="header__right"><span id="knob_temp" class="widgets_header__span">+23</span>
+            <img src="./icons/icon_temperature_2@1x.png" alt="temperature" class="widgets_icon">
           </div>
         </div>
         <!-- end of header -->
@@ -382,7 +384,7 @@
       </div>
     </div>
 
-    <!-- eshe odin poput -->
+    <!-- eshe odin poput yeelight лампа -->
 
     <div class="widget_popup" id="xiaomi_yeelight_bulb">
       <div class="widget_content">
@@ -392,7 +394,7 @@
             <p>Включится в 17:00</p>
           </div>
           <div class="header__right">
-            <img src="./icons/icon_sun@1x.png" alt="light">
+            <img src="./icons/icon_sun@1x.png" alt="light" class="widgets_icon">
           </div>
         </div>
         <!-- end of header -->
@@ -400,11 +402,14 @@
 
           <form action="" method="get" oninput="rating_output.value=rating.value">
             <div class="half-width">
-              <label for="rating">Вручную</label>
-              <input name="rating" id="rating" type="range" min="0" max="10" step="1" value="5">
+              <div class="yeelight_labels"> <label for="rating">Вручную</label></div>
+              <div class="yeelight_labels"> <label for="rating">Дневной свет</label></div>
+              <div class="yeelight_labels"> <label for="rating">Вечерний свет</label></div>
+              <div class="yeelight_labels"> <label for="rating">Рассвет</label></div>
+              <input name="rating" id="rating" type="range" min="0" max="30" step="1" value="15">
             </div>
             <div class="half-width output-area">
-              <output name="rating_output" id="rating_output">4</output>
+              <output name="rating_output" id="rating_output"></output>
             </div>
           </form>
 
@@ -417,17 +422,60 @@
         <div class="decline ">Закрыть</div>
       </div>
     </div>
+    <!-- Elgato Eve Degree Connected  -->
 
+    <div class="widget_popup" id="elgato_eve">
+      <div class="widget_content">
+        <div class="widget_content__header">
+          <div class="header__left">
+            <p>Elgato Eve Degree Connected</p>
+            <p>Включено</p>
+          </div>
+          <div class="header__right">
+            <span id="eve_plus" class="widgets_header__span">+15</span>
+            <!-- <output name="eve_output" id="eve_output">15</output>
+               oninput="eve_output.value=eve_input.value"
+            -->
+            <img src="./icons/icon_temperature_2@1x.png" alt="tempetature" class="widgets_icon">
+          </div>
+        </div>
+        <!-- end of header -->
+        <div class="range">
+
+          <form action="" method="get">
+            <div class="half-width">
+              <label id="eve_manually" class="eve_labels eve_active" for="eve_input">Вручную</label>
+              <label id="eve_cold" class="eve_labels" for="eve_input">Холодно</label>
+              <label id="eve_warm" class="eve_labels" for="eve_input">Тепло</label>
+              <label id="eve_hot" class="eve_labels" for="eve_input">Жарко</label>
+              <input name="temperature_eve" id="eve_input" type="range" min="-10" max="30" value="15" step="1">
+            </div>
+            <div class="half-width output-area">
+
+            </div>
+          </form>
+
+        </div>
+
+
+      </div>
+      <div class="widget_content__buttons ">
+        <div class="accept ">Применить</div>
+        <div class="decline ">Закрыть</div>
+      </div>
+    </div>
     <!-- konec. Стили понятное дело надо нормально сортировать и переименовать -->
-    <div class="shadow">
+    <div id="shadow">
 
     </div>
 
 
     <script src="./js/scripts.js "></script>
     <script src="./js/knob.js "></script>
+    <script src="./js/popup_eve.js"></script>
     <script src="./js/popup_floor.js "></script>
-    <script src="./js/ "></script>
+    <script src="./js/popup_yeelight.js"></script>
+    <script src="js/popup_buttons.js"></script>
 </body>
 
 </html>

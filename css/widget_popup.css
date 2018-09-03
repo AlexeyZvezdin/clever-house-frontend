@@ -46,6 +46,10 @@
 	color: #333333;
 }
 
+.widgets_header__span {
+	vertical-align: top;
+}
+
 .widget_content__buttons {
 	margin-top: 21px;
 	display: flex;
